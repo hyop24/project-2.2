@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            text-align: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: rgb(112, 82, 39);
+            font-size: 3rem;
+        }
+
+        body {
+            background-color: rgb(231, 220, 205);
+        }
+
+        #charInput1, #charInput2 {
+            margin-top: 20px;
+            display: inline-block;
+            padding: 5px;
+            background-color: rgb(199, 186, 168);
+        }
+
+        .input-container {
+              text-align: center;
+        }
+
+        #submitButton {
+            display: block;
+            margin-top: 5px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-left: center;
+            background-color: rgb(236, 204, 158);
+        }
+
+        #displayedImage {
+            display: none; 
+            width: 500px;
+            border-radius: 3%;
+            border: 2px solid gray;
+            margin-top: 50px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        
+        }
+    </style>
+</head>
+<body>
+
+    <h1>
+        Sushi
+    </h1>
+
+    <div class="input-container">
+        <input type="text" id="charInput1" maxlength="1" style="width: 15px;">
+        <input type="text" id="charInput2" maxlength="1" style="width: 15px;">
+    </div>
+
+
+    <button onclick="displayImage()" id="submitButton">Get Food</button>
+
+    <img id="displayedImage" src="" alt="Displayed Image">
+
+    <script>
+        function displayImage() {
+            const imgElement = document.getElementById("displayedImage");
+
+            const input1_letter = document.getElementById("charInput1").value.toUpperCase();
+            const input2_letter = document.getElementById("charInput2").value.toUpperCase();
+
+            const input1_number = input1_letter.charCodeAt(0); 
+            const input2_number = input2_letter.charCodeAt(0);
+
+
+            if((input1_letter === "A"||input1_letter === "B"||input1_letter === "C"||input1_letter === "D"||input1_letter === "E") && (input2_letter === "A"||input2_letter === "B"||input2_letter === "C"||input2_letter === "D"||input2_letter === "E")) { //If input1_letter equals A AND input2_letter does not equal B, then show this image
+                imgElement.src = "images/salmon.jpg"
+                imgElement.style.display = "block";
+            }
+            
+            if((input1_letter === "A"||input1_letter === "B"||input1_letter === "C"||input1_letter === "D"||input1_letter === "E") && (input2_letter === "F"||input2_letter === "G"||input2_letter === "H"||input2_letter === "I"||input2_letter === "J")) { //If input1_letter equals A AND input2_letter does not equal B, then show this image
+                imgElement.src = "images/salmon2.jpg"
+                imgElement.style.display = "block";
+            }
+
+            if((input1_letter === "A"||input1_letter === "B"||input1_letter === "C"||input1_letter === "D"||input1_letter === "E") && (input2_letter === "K"||input2_letter === "L"||input2_letter === "M"||input2_letter === "N"||input2_letter === "O")) { //If input1_letter equals A AND input2_letter does not equal B, then show this image
+                imgElement.src = "images/salmon3.jpg"
+                imgElement.style.display = "block";
+            }
+
+            if((input1_letter === "A"||input1_letter === "B"||input1_letter === "C"||input1_letter === "D"||input1_letter === "E") && (input2_letter === "P"||input2_letter === "Q"||input2_letter === "R"||input2_letter === "S"||input2_letter === "T")) { //If input1_letter equals A AND input2_letter does not equal B, then show this image
+                imgElement.src = "images/salmon4.jpg"
+                imgElement.style.display = "block";
+            }
+           
+            if((input1_letter === "A"||input1_letter === "B"||input1_letter === "C"||input1_letter === "D"||input1_letter === "E") && (input2_letter === "U"||input2_letter === "V"||input2_letter === "W"||input2_letter === "X"||input2_letter === "Y"||input2_letter === "Z")) { 
+                imgElement.src = "images/salmon5.jpg"
+                imgElement.style.display = "block";
+            }
+
+            if((input1_letter === "F"||input1_letter === "G"||input1_letter === "H"||input1_letter === "I"||input1_letter === "J") && (input2_letter === "A"||input2_letter === "B"||input2_letter === "C"||input2_letter === "D"||input2_letter === "E")) { 
+                imgElement.src = "images/tuna.jpg"
+                imgElement.style.display = "block";
+            }
+
+            if((input1_letter === "F"||input1_letter === "G"||input1_letter === "H"||input1_letter === "I"||input1_letter === "J") && (input2_letter === "F"||input2_letter === "G"||input2_letter === "H"||input2_letter === "I"||input2_letter === "J")) { 
+                imgElement.src = "images/tuna2.jpg"
+                imgElement.style.display = "block";
+            }
+
+            if((input1_letter === "F"||input1_letter === "G"||input1_letter === "H"||input1_letter === "I"||input1_letter === "J") && (input2_letter === "K"||input2_letter === "L"||input2_letter === "M"||input2_letter === "N"||input2_letter === "O")) { 
+                imgElement.src = "images/tuna3.jpeg"
+                imgElement.style.display = "block";
+            }
+
+            if((input1_letter === "F"||input1_letter === "G"||input1_letter === "H"||input1_letter === "I"||input1_letter === "J") && (input2_letter === "P"||input2_letter === "Q"||input2_letter === "R"||input2_letter === "S"||input2_letter === "T")) { 
+                imgElement.src = "images/tuna4.jpg"
+                imgElement.style.display = "block";
+            }
+
+            if((input1_letter === "F"||input1_letter === "G"||input1_letter === "H"||input1_letter === "I"||input1_letter === "J") && (input2_letter === "U"||input2_letter === "V"||input2_letter === "W"||input2_letter === "X"||input2_letter === "Y"||input2_letter === "Z")) { 
+                imgElement.src = "images/tuna5.jpeg"
+                imgElement.style.display = "block";
+            }
+
+            if((input1_letter === "K"||input1_letter === "L"||input1_letter === "M"||input1_letter === "N"||input1_letter === "O") && (input2_letter === "A"||input2_letter === "B"||input2_letter === "C"||input2_letter === "D"||input2_letter === "E")) { 
+                imgElement.src = "images/egg.jpg"
+                imgElement.style.display = "block";
+            }
+
+            if((input1_letter === "K"||input1_letter === "L"||input1_letter === "M"||input1_letter === "N"||input1_letter === "O") && (input2_letter === "F"||input2_letter === "G"||input2_letter === "H"||input2_letter === "I"||input2_letter === "J")) { 
+                imgElement.src = "images/egg2.jpg"
+                imgElement.style.display = "block";
+            }
+
+            if((input1_letter === "K"||input1_letter === "L"||input1_letter === "M"||input1_letter === "N"||input1_letter === "O") && (input2_letter === "K"||input2_letter === "L"||input2_letter === "M"||input2_letter === "N"||input2_letter === "O")) { 
+                imgElement.src = "images/egg3.jpg"
+                imgElement.style.display = "block";
+            }
+
+            if((input1_letter === "K"||input1_letter === "L"||input1_letter === "M"||input1_letter === "N"||input1_letter === "O") && (input2_letter === "P"||input2_letter === "Q"||input2_letter === "R"||input2_letter === "S"||input2_letter === "T")) { 
+                imgElement.src = "images/egg4.jpg"
+                imgElement.style.display = "block";
+            }
+
+            if((input1_letter === "K"||input1_letter === "L"||input1_letter === "M"||input1_letter === "N"||input1_letter === "O") && (input2_letter === "U"||input2_letter === "V"||input2_letter === "W"||input2_letter === "X"||input2_letter === "Y"||input2_letter === "Z")) { 
+                imgElement.src = "images/egg5.jpg"
+                imgElement.style.display = "block";
+            }
+
+            if((input1_letter === "P"||input1_letter === "Q"||input1_letter === "R"||input1_letter === "S"||input1_letter === "T") && (input2_letter === "A"||input2_letter === "B"||input2_letter === "C"||input2_letter === "D"||input2_letter === "E")) { 
+                imgElement.src = "images/shrimp.png"
+                imgElement.style.display = "block";
+            }
+
+            if((input1_letter === "P"||input1_letter === "Q"||input1_letter === "R"||input1_letter === "S"||input1_letter === "T") && (input2_letter === "F"||input2_letter === "G"||input2_letter === "H"||input2_letter === "I"||input2_letter === "J")) { 
+                imgElement.src = "images/shrimp2.jpg"
+                imgElement.style.display = "block";
+            }
+            if((input1_letter === "P"||input1_letter === "Q"||input1_letter === "R"||input1_letter === "S"||input1_letter === "T") && (input2_letter === "K"||input2_letter === "L"||input2_letter === "M"||input2_letter === "N"||input2_letter === "O")) { 
+                imgElement.src = "images/shrimp3.png"
+                imgElement.style.display = "block";
+            }
+            if((input1_letter === "P"||input1_letter === "Q"||input1_letter === "R"||input1_letter === "S"||input1_letter === "T") && (input2_letter === "P"||input2_letter === "Q"||input2_letter === "R"||input2_letter === "S"||input2_letter === "T")) { 
+                imgElement.src = "images/shrimp4.jpg"
+                imgElement.style.display = "block";
+            }
+            if((input1_letter === "P"||input1_letter === "Q"||input1_letter === "R"||input1_letter === "S"||input1_letter === "T") && (input2_letter === "U"||input2_letter === "V"||input2_letter === "W"||input2_letter === "X"||input2_letter === "Y"||input2_letter === "Z")) { 
+                imgElement.src = "images/shrimp5.jpg"
+                imgElement.style.display = "block";
+            }
+
+            if((input1_letter === "U"||input1_letter === "V"||input1_letter === "W"||input1_letter === "X"||input1_letter === "Y"||input1_letter === "Z") && (input2_letter === "A"||input2_letter === "B"||input2_letter === "C"||input2_letter === "D"||input2_letter === "E")) { 
+                imgElement.src = "images/eel.jpg"
+                imgElement.style.display = "block";
+            }
+
+            if((input1_letter === "U"||input1_letter === "V"||input1_letter === "W"||input1_letter === "X"||input1_letter === "Y"||input1_letter === "Z") && (input2_letter === "F"||input2_letter === "G"||input2_letter === "H"||input2_letter === "I"||input2_letter === "J")) { 
+                imgElement.src = "images/eel2.jpg"
+                imgElement.style.display = "block";
+            }
+
+            if((input1_letter === "U"||input1_letter === "V"||input1_letter === "W"||input1_letter === "X"||input1_letter === "Y"||input1_letter === "Z") && (input2_letter === "K"||input2_letter === "L"||input2_letter === "M"||input2_letter === "N"||input2_letter === "O")) { 
+                imgElement.src = "images/eel3.jpg"
+                imgElement.style.display = "block";
+            }
+
+            if((input1_letter === "U"||input1_letter === "V"||input1_letter === "W"||input1_letter === "X"||input1_letter === "Y"||input1_letter === "Z") && (input2_letter === "P"||input2_letter === "Q"||input2_letter === "R"||input2_letter === "S"||input2_letter === "T")) { 
+                imgElement.src = "images/eel4.jpg"
+                imgElement.style.display = "block";
+            }
+
+            if((input1_letter === "U"||input1_letter === "V"||input1_letter === "W"||input1_letter === "X"||input1_letter === "Y"||input1_letter === "Z") && (input2_letter === "U"||input2_letter === "V"||input2_letter === "W"||input2_letter === "X"||input2_letter === "Y"||input2_letter === "Z")) { 
+                imgElement.src = "images/eel5.jpg"
+                imgElement.style.display = "block";
+            }
+
+        }
+
+    </script>
+</body>
+</html>
