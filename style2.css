@@ -53,7 +53,7 @@ h2 {
 
 }
 
-@keyframes moveAcross {
+@keyframes move1 {
     from {
       transform: translateX(1500px);
     }
@@ -62,7 +62,7 @@ h2 {
     }
   }
 
-  .image-container {
+.image-container {
   display: flex;
   overflow: hidden;
   position: relative;
@@ -70,16 +70,16 @@ h2 {
   height: 150px; 
   align-items: center; 
   gap: 20px; 
-  }
+}
 
-  .image-container img {
+.image-container img {
     width: 180px; 
     margin-right: 20px; 
-    animation: moveAcross 25s linear infinite;
+    animation: move1 25s linear infinite;
     filter: contrast(0) sepia(100%) saturate(200%) hue-rotate(320deg);
-  }
+}
 
-  @keyframes moveAcross2 {
+@keyframes move2 {
     from {
         transform: translateX(-3300px);
     
@@ -102,11 +102,13 @@ h2 {
 .image-container2 img {
     width: 180px; 
     margin-right: 20px; 
-    animation: moveAcross2 25s linear infinite;
+    animation: move2 25s linear infinite;
     filter: contrast(0) sepia(100%) saturate(200%) hue-rotate(320deg);
 }
 
 .fish {
     border-radius: 10%;
 }
+
+
 
